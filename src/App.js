@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import ViewAll from "./pages/ViewAll";
 import { Routes, Route } from "react-router-dom";
 import AddBill from "./pages/AddBill";
+import AddDriverReport from "./pages/AddDriverReport";
+import ViewDriverReport from "./pages/ViewDriverReport";
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/view" element={<ViewAll/>} />
           <Route path="/add" element={<AddBill/>} />
+          <Route path="/adddrv" element={<AddDriverReport/>} />
+          
+          <Route path="/viewdrvreport" element={<ViewDriverReport/>} />
       </Routes>
     </div>
 
