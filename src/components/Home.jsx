@@ -24,6 +24,8 @@ const Home = () => {
                         </div>
                         <div className="p-4 w-full">
                             <div className="border-2 border-gray-200 px-4 py-6 rounded-lg bg-slate-200">
+                            <Link to='/add'>
+
                                 <img src="./images/truck.png" alt="Add Bl" className="w-20 h-20 mb-4 inline-block" />
                                 <div>
                                     <button
@@ -33,6 +35,7 @@ const Home = () => {
                                         Add Bl
                                     </button>
                                 </div>
+                                </Link>
                             </div>
                         </div>
                         <div className="p-4 w-full">

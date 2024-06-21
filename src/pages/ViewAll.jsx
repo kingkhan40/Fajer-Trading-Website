@@ -34,7 +34,7 @@ const ViewAll = () => {
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    const maxPagesToShow = 4; // Maximum number of page numbers to show
+    const maxPagesToShow = 4; 
 
     let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
     let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -70,7 +70,7 @@ const ViewAll = () => {
       );
     });
     setFilteredBills(filteredData);
-    setCurrentPage(1); // Reset to first page when search term changes
+    setCurrentPage(1); 
   };
 
   return (
