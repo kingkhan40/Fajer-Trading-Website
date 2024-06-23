@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { toast } from 'react-toastify';
-import { CircleLoader, SyncLoader } from 'react-spinners'; // Assuming you have imported CircleLoader from react-spinners
 
 function AddDriverReport() {
     const [driverName, setDriverName] = useState('');
@@ -11,13 +9,12 @@ function AddDriverReport() {
     const [fuel, setFuel] = useState('');
     const [containerNo, setContainerNo] = useState('');
     const [currentDate, setCurrentDate] = useState('');
-    const [loading, setLoading] = useState(false); // State to manage loading state
 
     useEffect(() => {
         const getCurrentDate = () => {
             const now = new Date();
             const year = now.getFullYear();
-            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const month = (now.getMonth() + 1).toString().padStart(2, '0'); 
             const day = now.getDate().toString().padStart(2, '0');
             setCurrentDate(`${year}-${month}-${day}`);
         };
@@ -27,36 +24,32 @@ function AddDriverReport() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setLoading(true); // Set loading state to true when form is submitted
-
+        
         const formData = {
             name: driverName,
             location,
             customerName,
-            price: Number(price),
-            fuel: Number(fuel),
+            price: Number(price), 
+            fuel: Number(fuel), 
             containerNo,
-            date: currentDate
+            date: currentDate 
         };
 
         try {
             const response = await axios.post('https://import-export-iisi.vercel.app/driverReport/addDriverReport', formData);
             console.log('Form submitted:', response.data);
 
-            // Reset form fields after successful submission
             setDriverName('');
             setLocation('');
             setCustomerName('');
             setPrice('');
             setFuel('');
             setContainerNo('');
-
-            toast.success('Report submitted successfully!');
+            
+            alert('Report submitted successfully!');
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Failed to submit report. Please try again.');
-        } finally {
-            setLoading(false); // Set loading state back to false after submission (whether success or error)
         }
     };
 
@@ -147,9 +140,8 @@ function AddDriverReport() {
                     <button
                         type="submit"
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
-                        disabled={loading} // Disable button when loading is true
                     >
-                        {loading ? <SyncLoader className='flex items-center justify-center' color="#36d7b7" size={18} /> : 'Upload'} {/* Show loading spinner when loading is true */}
+                        Upload
                     </button>
                 </div>
             </form>
