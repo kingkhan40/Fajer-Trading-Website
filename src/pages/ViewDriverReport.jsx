@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const ViewDriverReport = () => {
     const [reports, setReports] = useState([]);
@@ -100,6 +101,7 @@ const ViewDriverReport = () => {
                 </div>
                 {currentReports.map((report) => (
                     <div key={report._id} className="bg-white shadow-md rounded-md px-8 py-6 mb-4 relative">
+                        <Link to={`/viewdrvreport/${report._id}`}>
                         <div className="absolute top-2 left-6 text-xs text-gray-500 mt-1 ml-2">DATE: {formatDate(report.date)}</div>
                         <div className="flex">
                             <div className="w-1/2">
@@ -118,6 +120,7 @@ const ViewDriverReport = () => {
                                 <div className=" mt-2"><span className="font-semibold">BALANCE: </span> {report.balance}</div>
                             </div>
                         </div>
+                        </Link>
                     </div>
                 ))}
                 <div className="flex justify-center">

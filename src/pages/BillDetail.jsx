@@ -70,7 +70,7 @@ const BillDetail = () => {
           </h2>
         </div>
 
-        <div className="max-w-3xl my-5 bg-gray-200 rounded-lg overflow-hidden shadow-xl">
+        <div className="max-w-3xl my-5 bg-gray-200 border border-gray-500 rounded-lg overflow-hidden shadow-xl">
           <h2 className="text-xl font-semibold bg-blue-300 p-4 text-center rounded-t-lg">Bill To :</h2>
           <div className="bg-white p-4">
             <p className="flex items-center justify-between border-b-2 p-1 py-2">
@@ -186,7 +186,7 @@ const BillDetail = () => {
               {totalAmountInWords}
             </span>
           </p>
-          <button onClick={downloadPDF} className="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex">
+          <button onClick={downloadPDF} className="px-4 py-3 bg-blue-400 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>

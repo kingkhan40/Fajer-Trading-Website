@@ -11,6 +11,7 @@ import AddBill from "./pages/AddBill";
 import AddDriverReport from "./pages/AddDriverReport";
 import ViewDriverReport from "./pages/ViewDriverReport";
 import BillDetail from "./pages/BillDetail";
+import ViewDriverDetail from "./pages/ViewDriverDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/add" element={<AddBill />} />
         <Route path="/adddrv" element={<AddDriverReport />} />
         <Route path="/viewdrvreport" element={<ViewDriverReport />} />
+        <Route path="/viewdrvreport/:id" element={<ViewDriverDetail />} />
       </Routes>
     </div>
   );
