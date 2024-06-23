@@ -32,7 +32,7 @@ const Home = () => {
                                         role="link"
                                         className="relative font-medium text-xl after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
                                     >
-                                        Add Bl
+                                        Add Bill
                                     </button>
                                 </div>
                                 </Link>
@@ -40,28 +40,33 @@ const Home = () => {
                         </div>
                         <div className="p-4 w-full">
                             <div className="border-2 border-gray-200 px-4 py-6 rounded-lg bg-slate-200">
+                                <Link to= '/adddrv'>
+                                
                                 <img src="./images/drivers.png" alt="Add Driver Report" className="w-20 h-20 mb-4 inline-block" />
                                 <div>
                                     <button
                                         role="link"
                                         className="relative font-medium text-xl after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
-                                    >
+                                        >
                                         Add Driver Report
                                     </button>
                                 </div>
+                                        </Link>
                             </div>
                         </div>
                         <div className="p-4 w-full">
                             <div className="border-2 border-gray-200 px-4 py-6 rounded-lg bg-slate-200">
+                                <Link to= "/viewdrvreport">
                                 <img src="./images/report.png" alt="View Driver Report" className="w-20 h-20 mb-4 inline-block" />
                                 <div>
                                     <button
                                         role="link"
-                                        className="relative font-medium text-xl after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
-                                    >
+                                        className="relative font-medium text-xl after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 whitespace-wrap"
+                                        >
                                         View Driver Report
                                     </button>
                                 </div>
+                                        </Link>
                             </div>
                         </div>
                         <div className="p-4 w-full">

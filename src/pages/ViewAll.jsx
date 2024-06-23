@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ViewAll = () => {
   const [bills, setBills] = useState([]);
@@ -34,7 +35,7 @@ const ViewAll = () => {
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    const maxPagesToShow = 4; 
+    const maxPagesToShow = 4;
 
     let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
     let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -70,7 +71,7 @@ const ViewAll = () => {
       );
     });
     setFilteredBills(filteredData);
-    setCurrentPage(1); 
+    setCurrentPage(1);
   };
 
   return (
@@ -139,7 +140,11 @@ const ViewAll = () => {
               <tbody>
                 {currentBills.map((bill) => (
                   <tr key={bill._id}>
-                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{bill.bl_no}</td>
+                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <Link to={`/view/${bill._id}`} className="text-blue-500 hover:underline">
+                        {bill.bl_no}
+                      </Link>
+                    </td>
                     <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{bill.company}</td>
                     <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{bill.invoice_number}</td>
                     <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">{bill.fieldsData.length > 0 ? bill.fieldsData[0].Qty : '-'}</td>
@@ -170,11 +175,11 @@ const ViewAll = () => {
                   <FaChevronRight />
                 </button>
               </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 
