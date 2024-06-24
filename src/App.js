@@ -4,7 +4,6 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './index.css';
-import Header from "./components/Header";
 import Home from "./components/Home";
 import ViewAll from "./pages/ViewAll";
 import AddBill from "./pages/AddBill";
@@ -16,7 +15,6 @@ import ViewDriverDetail from "./pages/ViewDriverDetail";
 function App() {
   return (
     <div className="">
-      <Header />
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
